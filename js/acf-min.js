@@ -1,0 +1,1 @@
+jQuery,acf.add_filter("color_picker_args",(function(f,e){return"background_color"==e[0].dataset.name?f.palettes=["#15B8D4","#F79421","#D81E44","#f8f8f8"]:f.palettes=["#15B8D4","#F79421","#D81E44","#1d1d2c","#ffffff","#f8f8f8"],f}));

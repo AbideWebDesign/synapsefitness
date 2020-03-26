@@ -1,0 +1,31 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+$blue:		#15B8D4;
+$teal:		#72c6a6;
+$yellow:	#F79421;
+$red: 		#D81E44;
+$light:		#dee2e6;
+$secondary:	$yellow;
+$accent: 	$red;
+
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-serif: 'chiavettieri', sans-serif;
+$font-size-sm: 1em * .675;
+$font-size-lg: 1.2rem;
+
+$line-height-sm: 1.5;
+$line-height-lg: 1.9;
+
+$h1-font-weight: 700;
+$h1-line-height: 1.138888889;
+
+$h3-font-size: 1em * 1.45;
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1300px
+);
