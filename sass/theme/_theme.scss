@@ -721,12 +721,13 @@ body .site {
 	border: none;
 	padding: 0;
 }
-.tribe-events-schedule .tribe-events-cost {
+.tribe-events-schedule .tribe-events-cost, .tribe-events-c-small-cta__price {
 	display: none;
 }
 .tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus, .tribe-events .datepicker .day.active:hover, .tribe-events .datepicker .month.active, .tribe-events .datepicker .month.active.focused, .tribe-events .datepicker .month.active:focus, .tribe-events .datepicker .month.active:hover, .tribe-events .datepicker .year.active, .tribe-events .datepicker .year.active.focused, .tribe-events .datepicker .year.active:focus, .tribe-events .datepicker .year.active:hover {
 	background: $primary;
 }
+
 @include media-breakpoint-down(lg) {
 	body {
 		.site{
