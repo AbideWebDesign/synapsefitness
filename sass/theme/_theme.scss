@@ -85,6 +85,9 @@ abbr[title], abbr[data-original-title] {
 		font-size: 1.5rem;
 	}
 }
+*:focus, button:focus {
+	outline: none;
+}
 .btn {
 	padding: .95em 2.5em .85em;
 	border-radius: 0;
@@ -756,6 +759,12 @@ body .site {
 	body {
 		.site{
 			.tribe-events {
+				.tribe-events-c-events-bar__search-filters-container {
+					top: calc(100% + 16px);
+					margin-left: -15px;
+					margin-right: -15px;
+					border-bottom: 5px solid $primary;
+				}
 				.tribe-events-l-container {
 					padding: 0;
 				}

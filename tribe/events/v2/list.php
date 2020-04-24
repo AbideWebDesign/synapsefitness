@@ -64,23 +64,13 @@ if ( empty( $disable_event_search ) ) {
 					<div class="col-lg-8">
 						<?php $this->template( 'components/events-bar' ); ?>
 					</div>
-					<div class="col-auto align-self-center pl-lg-5">
+					<div class="col-auto align-self-center pl-lg-5 d-none d-lg-block">
 						<?php $this->template( 'list/top-bar' ); ?>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bg-white">
-			<div class="container">
-				<div class="row justif-content-center">
-					<div class="col-lg-8">
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="tribe-events-calendar-list container pt-lg-4">
-			
+		<div class="tribe-events-calendar-list container pt-md-4">
 			<div class="row">
 				<div class="col-12">
 					<div class="bg-white py-4 px-3 p-md-5">
@@ -97,7 +87,6 @@ if ( empty( $disable_event_search ) ) {
 							<?php $this->template( 'list/event', [ 'event' => $event ] ); ?>
 			
 						<?php endforeach; ?>
-
 					</div>
 				</div>
 			</div>
