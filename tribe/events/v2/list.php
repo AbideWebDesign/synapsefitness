@@ -1,5 +1,3 @@
-
-application/x-httpd-php list.php ( PHP script, ASCII text )
 <?php
 /**
  * View: List View
