@@ -97,24 +97,6 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 /*
- * Remove tags
- *
- */
-add_action( 'init', 'remove_tags' );
-function remove_tags() {
-
-	global $wp_taxonomies;
-
-	$tax = 'post_tag';
-
-	if( taxonomy_exists( $tax ) ) {
-		
-		unset( $wp_taxonomies[$tax] );
-	
-	}
-	    
-}
-/*
  * Add custom favicon to admin pages
  *
  */
@@ -151,9 +133,12 @@ if ( ! function_exists( 'synapsefitness_custom_excerpt_more' ) ) {
 	 * @return string
 	 */
 	function synapsefitness_custom_excerpt_more( $more ) {
+		
 		if ( ! is_admin() ) {
+			
 			$more = '';
 		}
+		
 		return $more;
 	}
 }
@@ -169,11 +154,16 @@ if ( ! function_exists( 'synapsefitness_all_excerpts_get_more_link' ) ) {
 	 * @return string
 	 */
 	function synapsefitness_all_excerpts_get_more_link( $post_excerpt ) {
+		
 		if ( ! is_admin() ) {
+		
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary synapsefitness-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
 			'synapsefitness' ) . '</a></p>';
+		
 		}
+		
 		return $post_excerpt;
+	
 	}
 }
 

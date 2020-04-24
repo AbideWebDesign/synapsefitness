@@ -129,6 +129,9 @@ abbr[title], abbr[data-original-title] {
 		border-bottom-color: darken($primary, 12);
 	}
 }
+.btn-plain {
+	border-bottom: 0;
+}
 .bg-accent {
 	background-color: $accent;
 }
@@ -727,7 +730,18 @@ body .site {
 .tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus, .tribe-events .datepicker .day.active:hover, .tribe-events .datepicker .month.active, .tribe-events .datepicker .month.active.focused, .tribe-events .datepicker .month.active:focus, .tribe-events .datepicker .month.active:hover, .tribe-events .datepicker .year.active, .tribe-events .datepicker .year.active.focused, .tribe-events .datepicker .year.active:focus, .tribe-events .datepicker .year.active:hover {
 	background: $primary;
 }
-
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-header__events-bar {
+	margin: 0;
+}
+.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
+	@extend .btn;
+	@extend .btn-plain;
+	@extend .btn-primary;
+	@extend .btn-sm;
+}
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-search__button {
+	margin-right: 1em;
+}
 @include media-breakpoint-down(lg) {
 	body {
 		.site{
