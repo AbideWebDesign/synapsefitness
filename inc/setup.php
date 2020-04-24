@@ -97,6 +97,24 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 /*
+ * Remove tags
+ *
+ */
+add_action( 'init', 'remove_tags' );
+function remove_tags() {
+
+	global $wp_taxonomies;
+
+	$tax = 'post_tag';
+
+	if( taxonomy_exists( $tax ) ) {
+		
+		unset( $wp_taxonomies[$tax] );
+	
+	}
+	    
+}
+/*
  * Add custom favicon to admin pages
  *
  */
