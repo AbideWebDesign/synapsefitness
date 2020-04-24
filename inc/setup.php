@@ -173,3 +173,17 @@ if ( function_exists('acf_add_options_page') ) {
 	));
 	
 }
+
+// Relocate ical and gcal links below meta
+add_action( 'tribe_events_single_event_after_the_meta', array( tribe( 'tec.iCal' ), 'single_event_links' ), 5 );
+remove_action( 'tribe_events_single_event_after_the_content', array( tribe( 'tec.iCal' ), 'single_event_links' ) );
+
+function tribe_get_event_website_link_label_default ($label) {
+	if( $label == tribe_get_event_website_url() ) {
+		$label = "Register &raquo;";
+	}
+
+	return $label;
+}
+ 
+add_filter( 'tribe_get_event_website_link_label', 'tribe_get_event_website_link_label_default' );

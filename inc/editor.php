@@ -24,6 +24,20 @@ function synapsefitness_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'synapsefitness_block_editor_styles', 1, 1 );
 
 /**
+ * Add custom styles to The Events Calendar event page
+ */
+add_action('admin_head', 'synapsefitness_admin_styles');
+
+function synapsefitness_admin_styles() {
+	
+	echo '<style>
+		#event_url,#event_cost tr:nth-child(2),#tribe_events_event_options,.eventBritePluginPlug, .events-cal #authordiv, .events-cal #footer-left, #tribe_events_event_details h2 {
+			display: none;
+		}
+	</style>';
+
+}
+/**
  * ACF Color Palette
  *
  * Add default color palatte to ACF color picker for branding

@@ -22,6 +22,9 @@ p {
 	font-size: $font-size-base;
 	line-height: 1.7;
 }
+abbr[title], abbr[data-original-title] {
+	text-decoration: none;
+}
 .text-lg, .text-lg p {
 	font-size: $font-size-lg;
 	line-height: $line-height-lg;
@@ -571,14 +574,67 @@ body {
 }
 
 /* Event Calendar */
-body .site{
+body .site {
+	.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+		padding: 0;
+		max-width: 100%;
+	}
+	#tribe-events-pg-template, .tribe-events-pg-template {
+		margin: 0;
+		max-width: 100%;
+	}
+	#tribe-events-content {
+		background-color: white;
+		padding: 2em 0;
+	}
+	.tribe-events-c-top-bar__datepicker-container .datepicker {
+		left: -340px !important;
+	}
+	.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-details {
+		width: 100%;
+	}
 	.tribe-events {
-		.tribe-events-l-container {
-			background-color: white;
-			margin: 4em auto;
+		.container {
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;	
+		}
+		.tribe-events-calendar-list-nav {
+			@extend .container;
 			padding-top: 2em;
+			border: none;
+		}
+		.tribe-events-c-ical {
+			@extend .container;
 			padding-bottom: 2em;
-			min-height: 400px;
+		}
+		.tribe-events-c-top-bar__datepicker-button:after {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			content: '\f073';
+			color: $secondary;
+			background-image: none;
+			position: absolute;
+			top: -20px;
+		}
+		.tribe-events-c-messages__message--notice:before {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			content: '\f272';
+			color: $secondary;
+			background-image: none;
+			font-size: 1.4em;
+			margin-top: -10px;
+			height: 30px;
+		}
+		.tribe-events-c-top-bar__datepicker-mobile {
+			display: none;
+		}
+		.tribe-events-header__top-bar {
+			margin-bottom: 0;
+		}
+		.tribe-events-l-container {
 			
 			.tribe-events-c-events-bar__views {
 				display: none;
@@ -594,10 +650,17 @@ body .site{
 				padding-bottom: .5em;
 			}
 			.tribe-events-calendar-list__event-title a, .tribe-events-calendar-list__event-title a:active, .tribe-events-calendar-list__event-title a:focus, .tribe-events-calendar-list__event-title a:hover, .tribe-events-calendar-list__event-title a:visited {
-				color: $primary;
+				color: $secondary;
 				text-decoration: none;
 				border: none;
 			}
+		}
+		#tribe-events-content {
+			background-color: white;
+			margin: 4em auto;
+			padding-top: 2em;
+			padding-bottom: 2em;
+			min-height: 400px;	
 		}
 		.tribe-events-c-ical__link {
 			@extend .btn;
@@ -610,20 +673,19 @@ body .site{
 	}
 	.tribe-common--breakpoint-full.tribe-events .tribe-events-c-top-bar__datepicker-desktop {
 		display: none !important;
-	}
-	#tribe-events-pg-template.tribe-events-pg-template {
-		margin: 4em auto;
-		padding: 4em;
-		background-color: white;
+	}	
+	.tribe-events-single-event-title {
+		@extend h2;
+		color: $secondary;
 	}
 	.tribe-events-back {
-		@extend .bg-secondary;
-		padding: .5em;
-		margin-bottom: 3em;
-		
-		a {
-			color: white;
-		}
+		padding: 0;
+		margin-bottom: 1em;
+	}
+	.tribe-events-schedule h2 {
+		font-size: 17px;
+		font-weight: 500;
+		color: $body-color;
 	}
 	#tribe-events-pg-template .tribe-events-content h1, .tribe-events-after-html h1, .tribe-events-before-html h1 {
 		@extend h1;
@@ -634,16 +696,56 @@ body .site{
 		margin-bottom: 0;
 	}
 }
-@include media-breakpoint-down(sm) {
+.single-tribe_events a.tribe-events-gcal, .single-tribe_events a.tribe-events-gcal:hover, .single-tribe_events a.tribe-events-ical, .single-tribe_events a.tribe-events-ical:hover {
+	@extend .btn;
+	@extend .btn-primary;
+	@extend .btn-sm;
+}
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b2 {
+	font-size: 17px;
+	font-weight: 500;
+}
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-h4--min-medium {
+	@extend h2;
+}
+.single-tribe_events #tribe-events-content .tribe-events-event-meta .tribe-venue, .single-tribe_events #tribe-events-content .tribe-events-event-meta .tribe-organizer {
+	font-weight: bold;
+}
+.tribe-events-event-meta address.tribe-events-address, .tribe-events-list .tribe-events-venue-details {
+	font-style: normal;
+}
+.single-tribe_events .tribe-events-cal-links {
+	margin-bottom: 0;
+}
+.single-tribe_events #tribe-events-footer {
+	border: none;
+	padding: 0;
+}
+.tribe-events-schedule .tribe-events-cost {
+	display: none;
+}
+.tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus, .tribe-events .datepicker .day.active:hover, .tribe-events .datepicker .month.active, .tribe-events .datepicker .month.active.focused, .tribe-events .datepicker .month.active:focus, .tribe-events .datepicker .month.active:hover, .tribe-events .datepicker .year.active, .tribe-events .datepicker .year.active.focused, .tribe-events .datepicker .year.active:focus, .tribe-events .datepicker .year.active:hover {
+	background: $primary;
+}
+@include media-breakpoint-down(lg) {
 	body {
 		.site{
 			#tribe-events-pg-template.tribe-events-pg-template {
-				margin: .5em 0;
-				padding: 2em 19.5px;
+				margin: 0;
+				padding: 0;
 			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	body {
+		.site{
 			.tribe-events {
 				.tribe-events-l-container {
-					margin: .5em 0;
+					padding: 0;
+				}
+				.tribe-events-calendar-list {
+					padding-top: 2em;
 				}
 				.tribe-common-h6 {
 					font-size: 20px;
@@ -660,6 +762,9 @@ body .site{
 					margin: auto;
 					width: auto;
 				}		
+			}
+			#btn-event {
+				width: 100%;
 			}
 		}
 	}
