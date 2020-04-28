@@ -55,7 +55,15 @@ $card_class = ( get_field('type') == 'Images' ? 'card-link-image' : 'card-link-i
 					
 					<div class="mb-3">
 						
-						<h2><?php the_sub_field('card_title'); ?></h2>	
+						<?php if ( get_field('type') == 'Images' ): ?>
+						
+							<h3><?php the_sub_field('card_title'); ?></h3>	
+							
+						<?php else: ?>
+						
+							<h2><?php the_sub_field('card_title'); ?></h2>	
+						
+						<?php endif; ?>
 						
 					</div>
 					
