@@ -5,6 +5,8 @@
  * This is the template that displays the card links block.
  */
 
+$card_class = ( get_field('type') == 'Images' ? 'card-link-image' : 'card-link-icon' );
+
 ?>
 
 <div class="container-card-links wrapper bg-primary">
@@ -19,9 +21,21 @@
 					
 					<?php if ( get_sub_field('card_image') ): ?>
 					
-						<div class="card-link-image mb-3">
+						<div class="<?php echo $card_class; ?> mb-3">
 							
-							<?php echo wp_get_attachment_image( get_sub_field('card_image'), 'Full', false, array('class'=>'img-fluid') ); ?>
+							<?php if ( get_field('type') == 'Images' ): ?>
+								
+								<div class="bg-white p-2">
+										
+									<?php echo wp_get_attachment_image( get_sub_field('card_image'), 'Card Image', false, array('class'=>'img-fluid') ); ?>
+									
+								</div>
+								
+							<?php else: ?>
+							
+								<?php echo wp_get_attachment_image( get_sub_field('card_image'), 'Full', false, array('class'=>'img-fluid') ); ?>
+							
+							<?php endif; ?>
 							
 						</div>
 						

@@ -3,6 +3,31 @@
     "title": "Block - Card Links",
     "fields": [
         {
+            "key": "field_5ea8586d5754d",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Icons": "Icons",
+                "Images": "Images"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "label",
+            "placeholder": ""
+        },
+        {
             "key": "field_5e6288c1b03c6",
             "label": "Cards",
             "name": "cards",
@@ -172,5 +197,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587754829
+    "modified": 1588091488
 }

@@ -117,6 +117,7 @@ add_action('wp_head', 'add_login_favicon');
  */
 add_image_size('Side Cover', 1067, 1600, true);
 add_image_size('Hero Banner', 2000, 600, true);
+add_image_size('Card Image', 500, 348, true);
 
 /*
  * Set excerpt
