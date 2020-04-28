@@ -26,8 +26,20 @@ $card_class = ( get_field('type') == 'Images' ? 'card-link-image' : 'card-link-i
 							<?php if ( get_field('type') == 'Images' ): ?>
 								
 								<div class="bg-white p-2">
-										
+									
+									<?php if ( get_sub_field('include_button') ): ?>
+					
+										<a href="<?php the_sub_field('button_link'); ?>">
+											
+									<?php endif; ?>
+									
 									<?php echo wp_get_attachment_image( get_sub_field('card_image'), 'Card Image', false, array('class'=>'img-fluid') ); ?>
+									
+									<?php if ( get_sub_field('include_button') ): ?>
+					
+										</a>
+											
+									<?php endif; ?>
 									
 								</div>
 								
