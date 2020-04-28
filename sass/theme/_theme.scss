@@ -22,10 +22,6 @@ p, li {
 	font-size: $font-size-base;
 	line-height: 1.7;
 }
-
-p:not(:last-child), li:not(:last-child) {
-	margin-bottom: 1em;
-}
 abbr[title], abbr[data-original-title] {
 	text-decoration: none;
 }
@@ -145,6 +141,11 @@ abbr[title], abbr[data-original-title] {
 /* Page */
 body {
 	@extend .bg-light;
+}
+#page-wrapper {
+	p:not(:last-child), li:not(:last-child) {
+		margin-bottom: 1em;
+	}
 }
 /* Navbar */
 #wrapper-navbar {
