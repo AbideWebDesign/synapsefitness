@@ -25,7 +25,7 @@ $card_class = ( get_field('type') == 'Images' ? 'card-link-image' : 'card-link-i
 							
 							<?php if ( get_field('type') == 'Images' ): ?>
 								
-								<div class="bg-white p-2">
+								<div class="bg-white p-2 mb-4">
 									
 									<?php if ( get_sub_field('include_button') ): ?>
 					

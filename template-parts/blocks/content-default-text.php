@@ -96,7 +96,7 @@ if ( $group_settings['type'] == 'text-sidebar' ) {
 					
 					<?php if ( $group_content['content_title'] != '' ): ?>
 					
-						<h2><?php echo $group_content['content_title']; ?></h2>
+						<h2 class="text-center mb-4"><?php echo $group_content['content_title']; ?></h2>
 					
 					<?php endif; ?>
 					
