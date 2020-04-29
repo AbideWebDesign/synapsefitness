@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
 							
 							<li class="list-inline-item"><a href="<?php the_field('facebook','options'); ?>"><i class="fa fa-facebook-f"></i></a></li>
 							
-							<li class="list-inline-item"><a href="<?php the_field('linkedin','options'); ?>"><i class="fa fa-linkedin"></i></a></li>
+<!-- 							<li class="list-inline-item"><a href="<?php the_field('linkedin','options'); ?>"><i class="fa fa-linkedin"></i></a></li> -->
 							
 						</ul>
 						
@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 				
 				<div class="mb-3">
 					
-					<a href="<?php echo home_url('/donate'); ?>" class="btn btn-secondary">Donate</a>
+					<a href="<?php echo home_url('/contact-us'); ?>" class="btn btn-primary">Contact Us</a>
 					
 				</div>
 				
