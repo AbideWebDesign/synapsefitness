@@ -51,7 +51,7 @@
 						
 						<div class="text-center text-lg-left">
 							
-							<a href="<?php echo home_url('/blog'); ?>" class="btn btn-accent">Read More Stories</a>
+							<a href="<?php echo home_url('/our-fighters'); ?>" class="btn btn-accent">Read More Stories</a>
 							
 						</div>
 						
