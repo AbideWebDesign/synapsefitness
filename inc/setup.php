@@ -197,3 +197,14 @@ function tribe_get_event_website_link_label_default ($label) {
 }
  
 add_filter( 'tribe_get_event_website_link_label', 'tribe_get_event_website_link_label_default' );
+
+// Change Gravity Forms Spinner
+add_filter( 'gform_ajax_spinner_url', 'spinner_url', 10, 2 );
+
+function spinner_url( $image_src, $form ) {
+    return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+}
+
+// Remove scroll to top functionality on multi-page forms.
+add_filter( 'gform_confirmation_anchor', '__return_false' );
