@@ -94,7 +94,7 @@ if ( empty( $disable_event_search ) ) {
 
 		<?php $this->template( 'list/nav' ); ?>
 
-		<?php $this->template( 'components/ical-link' ); ?>
+		<?php //$this->template( 'components/ical-link' ); ?>
 
 		<?php $this->template( 'components/after' ); ?>
 
