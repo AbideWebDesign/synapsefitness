@@ -3,7 +3,7 @@
 // @import "theme/theme_blocks"; 	// Hide autosave notice
 
 body {
-	.components-editor-notices__dismissible,.components-editor-notices__dismissible .components-notice, .components-editor-notices__pinned .components-notice {
+	.components-dropdown.table-of-contents,.components-editor-notices__dismissible,.components-editor-notices__dismissible .components-notice, .components-editor-notices__pinned .components-notice, input[id^="block-editor-inserter__search-"]:placeholder-shown+.block-editor-inserter__results .components-panel__body:first-of-type, .block-editor-inserter__menu-help-panel{
 		display: none !important;
 	}
 	
