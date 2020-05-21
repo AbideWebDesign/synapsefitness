@@ -92,6 +92,8 @@ function remove_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']); 
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_site_health']);
+	unset($wp_meta_boxes['dashboard']['normal']['core']['tribe_dashboard_widget']);
 
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
