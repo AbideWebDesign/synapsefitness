@@ -31,7 +31,7 @@ add_action('admin_head', 'synapsefitness_admin_styles');
 function synapsefitness_admin_styles() {
 	
 	echo '<style>
-		#event_url,#event_cost tr:nth-child(2),#tribe_events_event_options,.eventBritePluginPlug, .events-cal #authordiv, .events-cal #footer-left, #tribe_events_event_details h2, #your-profile .form-table:first-child, #your-profile .form-table:nth-child(3) {
+		#tagsdiv-post_tag, #postexcerpt, #event_url,#event_cost tr:nth-child(2),#tribe_events_event_options,.eventBritePluginPlug, .events-cal #authordiv, .events-cal #footer-left, #tribe_events_event_details h2, #your-profile .form-table:first-child, #your-profile .form-table:nth-child(3) {
 			display: none !important;
 		}
 	</style>';
