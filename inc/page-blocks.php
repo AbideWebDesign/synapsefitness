@@ -77,3 +77,18 @@ function synapsefitness_acf_block_render_callback( $block ) {
 	
 	}
 }
+
+add_filter( 'allowed_block_types', 'synapsefitness_allowed_block_types' );
+ 
+function synapsefitness_allowed_block_types( $allowed_blocks ) {
+
+	return array(
+		'acf/hero-banner',
+		'acf/default-text',
+		'acf/card-links',
+		'acf/featured-fighter',
+		'acf/side-by-side',
+		'acf/cta',
+	);
+ 
+}
