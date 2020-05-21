@@ -12,8 +12,16 @@ $group_settings = get_field('default_text_settings');
 $group_content = get_field('default_text_content');
 
 if ( $group_settings['type'] == 'text-sidebar' ) {
- 
-	$image = wp_get_attachment_image_src( $group_content['image']['id'], 'Side' );
+	
+	if ( $group_content['no_crop'] ) {
+		
+		$image = wp_get_attachment_image( $group_content['image']['id'], 'full', false, array('class'=>'fluid') );
+		
+	} else {
+		
+		$image = wp_get_attachment_image( $group_content['image']['id'], 'Side', false, array('class'=>'fluid') );
+		
+	}	
  
 } elseif ( $group_settings['type'] == 'text-bg' ) {
  
@@ -33,8 +41,6 @@ if ( $group_settings['type'] == 'text-sidebar' ) {
 		if ( $group_settings['type'] == 'text-sidebar' ): // Text with Sidebar
 		 
 		 	$text_position = $group_settings['text_position'];
-		
-			$image = wp_get_attachment_image_src( $group_content['image']['id'], 'Side' );
 		
 			$img_col_classes = 'col-md-5 col-lg-6 mb-4 align-self-center';
 			
@@ -81,7 +87,7 @@ if ( $group_settings['type'] == 'text-sidebar' ) {
 				
 				<div class="<?php echo $img_col_classes; ?>">
 					
-					<img src="<?php echo $image[0]; ?>" alt="<?php $image[1]; ?>" class="img-fluid" />
+					<?php echo $image; ?>
 					
 				</div>
 				
