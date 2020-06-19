@@ -310,7 +310,11 @@ body {
 		}	
 	}
 }
-
+.container-default-text.bg-secondary, .container-default-text.bg-primary {
+	h1 {
+		color: white;
+	}
+}
 /* Block - Footer */
 
 .container-footer {
